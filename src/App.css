@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f5f4f4;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+Navbar
+
+*/
+
+.navbar-wrapper {
+  background-image:linear-gradient(to bottom right,white,lightgray);
+  border-bottom: 1px solid;
+  padding: 10px;
+  box-shadow: 0px 1px rgb(253, 254, 255);
+}
+.navbar{
+margin: 0 200px;
+}
+.navbar-logo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-items {
+  display: flex;
+    list-style: none;
+    padding-inline-start: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-items li {
+  margin-right: 100px;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-items li:hover {
+  color: orange;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.search-input {
+  width: 60vh;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border:1px solid orange;
+  
+}
+
+.fas{
+  margin-left: 5px ;
+  cursor: pointer;
+  transition:all 0.2s ease-in-out ;
+}
+.fas:hover {
+  color: orange;
+  margin-left: 10px;
+}
+
+
+
+/*
+
+Responsive
+
+*/
+
+/* @media screen and (min-width:800px) {
+    
+  html{
+      font-size: 9px;
   }
-  to {
-    transform: rotate(360deg);
+ 
+} */
+
+@media screen and (max-width:1250px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-logo {
+     display: block;
+     font-size: 14px;
+  }
+
+  .navbar-items li {
+    font-size: 14px;
+  }
+  .input-wrapper {
+    display: flex;
+  }
+  .fas {
+    margin:5px;
   }
 }
+
+@media screen and (max-width:900px) { 
+
+  .navbar {
+    width: 250px;
+    margin: 20px auto;
+  }
+
+  .navbar-items {
+   display: inline;
+  }
+  .navbar-items li {
+    font-size: 12px;
+  }
+  .search-input {
+    width: 30vh;
+    margin-top: 10px;
+  }
+  .fas {
+    margin:15px;
+  }
+}
+
+

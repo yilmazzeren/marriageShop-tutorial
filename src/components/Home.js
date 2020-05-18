@@ -7,7 +7,7 @@ export default class Home extends Component {
         <div className="navbar">
         <div className="navbar-logo">
           <h1 style = {{cursor:"pointer"}}>EVLİLİK <span style={{color:"orange"}}>&</span> BALAYI</h1>
-          <h4 style={{color:"orange"}}>Bizi Arayın 05055050505</h4>
+          <h4 >Bizi Arayın : <span style={{color:"orange"}}>05055050505</span> </h4>
         </div>
         <div className="navbar-links">
             

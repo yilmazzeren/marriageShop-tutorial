@@ -47,7 +47,7 @@ margin: 0 200px;
   padding: 5px;
   border-radius: 5px;
   border:1px solid orange;
-  
+  outline:none;
 }
 
 .fas{
@@ -62,19 +62,133 @@ margin: 0 200px;
 
 
 
+
+/*
+
+Layout
+
+*/
+
+
+
+.layout-wrapper {
+  display: flex;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 25px;
+}
+
+
+
+
+/*
+
+Category
+
+*/
+
+.category-wrapper {
+  width:50vh;
+  border:1px solid gray;
+  border-radius: 5px;
+  box-shadow: 3px 3px rgb(218, 206, 206);
+  margin-right: 15px;
+  height: 100%;
+}
+.category-title {
+  margin-left: 11px;
+  background: rgb(133, 133, 240);
+  margin: 0;
+  padding: 5px;
+  text-align: -webkit-center;
+}
+
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group-item {
+  border-bottom: 1px solid gray;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+  background: beige;
+}
+.list-group-item:hover {
+  background-color: orange;
+  
+}
+.list-group-item input:checked  {
+  height: 20px;
+  width: 20px;
+}
+
+
+
+/*
+
+SearchResult
+
+*/
+
+.image {
+  transition: all 0.8s ease-in-out;
+}
+
+.image:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.card-wrapper {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.card {
+  margin-right: 15px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-price {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card-button {
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 6px;
+  background-color: palevioletred;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+
+.card-button:hover {
+  background-color: orange;
+  cursor: pointer;
+  color: black;
+}
+
+
+
+
+
+
+
+
 /*
 
 Responsive
 
 */
 
-/* @media screen and (min-width:800px) {
-    
-  html{
-      font-size: 9px;
-  }
- 
-} */
 
 @media screen and (max-width:1250px) {
   .navbar {
@@ -95,6 +209,13 @@ Responsive
   .fas {
     margin:5px;
   }
+  .layout-wrapper {
+    flex-direction: column;
+  }
+  .category-wrapper {
+    width: 105vh;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width:900px) { 
@@ -107,9 +228,7 @@ Responsive
   .navbar-items {
    display: inline;
   }
-  .navbar-items li {
-    font-size: 12px;
-  }
+ 
   .search-input {
     width: 30vh;
     margin-top: 10px;
@@ -117,6 +236,18 @@ Responsive
   .fas {
     margin:15px;
   }
+  .category-wrapper {
+    width: 80vh;
+    margin-bottom: 10px;
+  }
 }
 
-
+@media screen and (max-width:720px) { 
+  .category-wrapper {
+    width: 40vh;
+  }
+  .layout-wrapper{
+    width: 50%;
+    margin-left: 40px ;
+  }
+}

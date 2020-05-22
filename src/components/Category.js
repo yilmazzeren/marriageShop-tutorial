@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Category extends Component {
+ class Category extends Component {
 
     render() {
         return (
@@ -17,7 +17,11 @@ export default class Category extends Component {
                     <li className="list-group-item"><input type="checkbox"/> Nikah Şekeri</li>
                     <li className="list-group-item"><input type="checkbox"/> Ayakkabı</li>
                 </ul>
+                
             </div>
         )
     }
 }
+
+
+export default Category;

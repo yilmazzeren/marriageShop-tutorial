@@ -12,12 +12,10 @@ Navbar
 
 .navbar-wrapper {
   background-image:linear-gradient(to bottom right,white,lightgray);
-  border-bottom: 1px solid;
-  padding: 10px;
-  box-shadow: 0px 1px rgb(253, 254, 255);
 }
 .navbar{
 margin: 0 200px;
+
 }
 .navbar-logo {
   display: flex;
@@ -179,9 +177,24 @@ SearchResult
   color: black;
 }
 
+/*
+Add Item 
+*/
 
+.addItem-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
+.addItem-wrapper input {
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
 
+.addItem-wrapper label {
+  text-align: center;
+} 
 
 
 

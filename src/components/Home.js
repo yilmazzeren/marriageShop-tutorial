@@ -4,6 +4,7 @@ import * as inputActions from "../redux/actions/inputActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
+
 class Home extends Component {
   
 
@@ -37,6 +38,7 @@ class Home extends Component {
                 <li>SEPET</li>
               </Link>
               <Link to="iletisim"><li>İLETİŞİM</li></Link>
+              <Link to="urunEkleme"><li>EKLE</li></Link>
             </ul>
           </div>
         
@@ -46,6 +48,7 @@ class Home extends Component {
             
           </div>
         </div>
+        
       </div>
     );
   }

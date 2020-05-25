@@ -1,3 +1,4 @@
 export default {
-    text : "Henüz bir arama yapmadınız"
+    text : "Henüz bir arama yapmadınız",
+    cart:[]
 }

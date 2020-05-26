@@ -1,4 +1,5 @@
 export default {
     text : "Henüz bir arama yapmadınız",
-    cart:[]
+    cart:[],
+    categories:[]
 }

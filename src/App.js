@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from "react";
 import './App.css';
 import Home from "./components/Home";
 import Layout from './components/Layout';
@@ -9,11 +9,12 @@ import Order from './components/Order';
 import AddItem from './components/AddItem';
 import SearchResults from './components/SearchResults';
 
-function App() {
-  return (
+class App extends Component {
+
+  render() {
+    return (
     <div className="app">
       <Home/>
-      
       <Switch>
         <Route path="/" exact component={Layout}></Route>
         <Route path="/urunler" component={SearchResults}></Route>
@@ -24,6 +25,8 @@ function App() {
       </Switch>
     </div>
   );
+  }
+  
 }
 
 export default App;

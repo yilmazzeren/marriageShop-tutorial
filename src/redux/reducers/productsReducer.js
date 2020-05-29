@@ -1,0 +1,12 @@
+
+import * as actionsTypes from "../actions/actionsTypes";
+import initialState from "./initialState";
+
+export default function productsReducer (state = initialState.products , action) {
+    switch (action.type) {
+        case actionsTypes.GET_PRODUCTS_SUCCESS:
+            return action.payload
+        default:
+            return state;
+    }
+}

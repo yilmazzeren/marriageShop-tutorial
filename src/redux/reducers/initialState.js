@@ -1,5 +1,7 @@
 export default {
     text : "Henüz bir arama yapmadınız",
     cart:[],
-    categories:[]
+    categories:[],
+    products: [],
+    saveProduct : {}
 }

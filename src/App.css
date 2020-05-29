@@ -114,7 +114,7 @@ Category
   border-bottom: 1px solid gray;
   padding: 5px;
   transition: all 0.3s ease-in-out;
-  background: beige;
+  background-color: beige;
 }
 .list-group-item:hover {
   background-color: orange;
@@ -125,7 +125,14 @@ Category
   width: 20px;
 }
 
-
+.select {
+  padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    background: beige;
+    border-radius: 5px;
+}
 
 /*
 
@@ -176,6 +183,7 @@ SearchResult
   cursor: pointer;
   color: black;
 }
+
 
 /*
 Add Item 

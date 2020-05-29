@@ -8,6 +8,15 @@ class Category extends Component {
     this.props.actions.getCategories()
   }
 
+  changeProporties = (e) => {
+    const liElement=e.target.parentElement;
+    
+    if(liElement.style.backgroundColor==="") {
+      liElement.style.backgroundColor="orange"
+    }else if(liElement.style.backgroundColor==="orange") {
+      liElement.style.backgroundColor=""
+    }
+  }
 
   render() {
     return (
@@ -16,7 +25,7 @@ class Category extends Component {
         <ul className="list-group">
           {this.props.categories.map((item,id) => (
             <li key={id} className="list-group-item">
-              <input className="asd" type="checkbox" /> {item.categoryName}
+              <input onChange={this.changeProporties}  type="checkbox" /> {item.categoryName}
             </li>
           ))}
         </ul>

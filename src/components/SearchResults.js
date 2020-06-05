@@ -6,6 +6,7 @@ import { bindActionCreators } from "redux";
 import * as cartActions from "../redux/actions/cartActions";
 import * as productsActions from "../redux/actions/productsActions";
 
+import Fade from "react-reveal/Fade";
 class SearchResults extends Component {
   componentDidMount() {
     this.props.actions.getProducts();
@@ -39,21 +40,23 @@ class SearchResults extends Component {
         <hr />
         <div className="card-wrapper">
           {this.props.products.map((product, id) => (
-            <div key={id} className="card">
-              <img
-                style={{ width: "35vh" }}
-                className="image"
-                src={product.imageUrl}
-                alt=""
-              />
-              <div className="card-body">
-                <div className="card-title">{product.productName}</div>
-                <div className="card-price">{product.productPrice}</div>
-                <button onClick={this.addCartItem} className="card-button">
-                  Sepete Ekle
-                </button>
-              </div>
-            </div>
+            <Fade bottom>
+              <div key={id} className="card">
+                <img
+                  style={{ width: "35vh" }}
+                  className="image"
+                  src={product.imageUrl}
+                  alt=""
+                />
+                <div className="card-body">
+                  <div className="card-title">{product.productName}</div>
+                  <div className="card-price">{product.productPrice}</div>
+                  <button onClick={this.addCartItem} className="card-button">
+                    Sepete Ekle
+                  </button>
+                </div>
+              </div>{" "}
+            </Fade>
           ))}
         </div>
       </div>

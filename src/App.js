@@ -8,15 +8,17 @@ import Contact from './components/Contact';
 import Order from './components/Order';
 import AddItem from './components/AddItem';
 import SearchResults from './components/SearchResults';
+import Navbar from "./components/Navbar";
 
 class App extends Component {
 
   render() {
     return (
     <div className="app">
-      <Home/>
+      
+      <Navbar/>
       <Switch>
-        <Route path="/" exact component={Layout}></Route>
+        <Route path="/" exact component={Home}></Route>
         <Route path="/urunler" component={SearchResults}></Route>
         <Route path="/sepet" component={Cart}></Route>
         <Route path="/siparislerim" component={Order}></Route>
@@ -26,7 +28,5 @@ class App extends Component {
     </div>
   );
   }
-  
 }
-
 export default App;

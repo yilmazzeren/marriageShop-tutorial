@@ -1,66 +1,81 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import * as inputActions from "../redux/actions/inputActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import Fade from "react-reveal/Fade";
+import image2 from "../image/image2.jpg";
+import image3 from "../image/image3.jpg";
+import image4 from "../image/image4.jpg";
 
+import Slide from 'react-reveal/Slide';
 class Home extends Component {
-  myFunc = (e) => {
-    return this.props.actions.changeInput(e.target.value).payload;
-  };
-
   render() {
     return (
       <div className="navbar-wrapper">
-        <div className="navbar">
-          <div className="navbar-logo">
-            <Link to="/">
-              <Fade top>
-                <h1 style={{ cursor: "pointer" }}>
-                  EVLİLİK <span style={{ color: "orange" }}>&</span> BALAYI
-                </h1>
-              </Fade>
-            </Link>
+        <Fade left>
+          <div className="section1">
+            <h3
+              style={{
+                textAlign: "center",
+                fontSize: "50px",
+                padding: "60px",
+                letterSpacing: "10px",
+              }}
+            >
+              2020 YAZ SEZONU
+            </h3>
+          </div>
+        </Fade>
+
+        <Fade bottom>
+          <div className="section2">
+            <img className="first-image" src={image2} alt="" />
             <Fade right>
-              <h4>
-                Bizi Arayın :{" "}
-                <span style={{ color: "orange" }}>05055050505</span>{" "}
-              </h4>
+              <div className="section2-text">
+                BALIK <hr />
+              </div>
+            </Fade>
+            <Fade bottom>
+              <img className="second-image" src={image3} alt="" />
+              <Fade top>
+                <div className="section2-text2">
+                  MEKANLAR<hr />
+                </div>
+              </Fade>
             </Fade>
           </div>
-          <Fade left>
-            <div className="navbar-links">
-              <ul className="navbar-items">
-                <Link to="/urunler">
-                  <li>ÜRÜNLER</li>
-                </Link>
-                <Link to="/siparislerim">
-                  <li>SİPARİŞLERİM</li>
-                </Link>
-                <Link to="sepet">
-                  <li>SEPET</li>
-                </Link>
-                <Link to="iletisim">
-                  <li>İLETİŞİM</li>
-                </Link>
-                <Link to="urunEkleme">
-                  <li>EKLE</li>
-                </Link>
-              </ul>
-            </div>
-          </Fade>
-
-          <div className="input-wrapper">
-            <input
-              onChange={this.myFunc}
-              className="search-input"
-              placeholder="Ara"
-              type="text"
-            />
-            <i className="fas fa-search"></i>
+        </Fade>
+        <Slide left>
+          <div className="section3">
+          <h3
+              style={{
+                textAlign: "left",
+                fontSize: "50px",
+                padding: "60px",
+                letterSpacing: "10px",
+                color:"white"
+              }}
+            >
+              DIŞ ÇEKİM
+            </h3>
           </div>
-        </div>
+        </Slide>
+            <Slide left>
+          <div >
+          <h3
+              style={{
+                textAlign: "left",
+                fontSize: "50px",
+                padding: "60px",
+                letterSpacing: "10px",
+                color:"white"
+              }}
+            >
+              Hakkımızda
+            </h3>
+          </div>
+        </Slide>
+        
       </div>
     );
   }

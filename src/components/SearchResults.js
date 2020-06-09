@@ -26,7 +26,7 @@ class SearchResults extends Component {
     return (
       <div style={{ width: "100%" }} className="searchResult-wrapper">
         <h4 style={{ margin: "0" }}>
-          Arama Sonuçları :{" "}
+          Arama Sonuçları : 
           <p
             style={{
               color: "orange",
@@ -55,7 +55,7 @@ class SearchResults extends Component {
                     Sepete Ekle
                   </button>
                 </div>
-              </div>{" "}
+              </div>
             </Fade>
           ))}
         </div>

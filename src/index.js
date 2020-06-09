@@ -11,6 +11,7 @@ import configureStore from "./redux/reducers/store";
 const store = configureStore();
 
 ReactDOM.render(
+  
   <BrowserRouter>
     <Provider store ={store}>
       <React.StrictMode>

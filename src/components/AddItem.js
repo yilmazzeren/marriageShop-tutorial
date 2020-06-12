@@ -63,7 +63,6 @@ export default class AddItem extends Component {
               <option value="Ayakkabı">Ayakkabı</option>
             </select>
           </div>
-
           <input className="card-button" type="submit" value="Save" />
         </form>
       </div>

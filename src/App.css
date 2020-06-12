@@ -9,11 +9,11 @@ body {
 .navbar-links {
   display: flex;
   justify-content: center;
+ 
 }
 .navbar-items {
   display: flex;
   list-style-type: none;
-  
 }
 .navbar-items a {
   text-decoration: none;
@@ -29,11 +29,11 @@ body {
 
 .search_btn {
   cursor: pointer;
+  margin-top: -2px;
 }
 .search-input {
   padding: 0;
   height: 25px;
-  margin-top: 9px;
   width: 250px;
   display: none;
   font-family: "Montserrat", sans-serif;
@@ -46,21 +46,20 @@ body {
 }
 .section1 {
   background-image: url("./image/image1.jpg");
- background-repeat: no-repeat;
- background-size: cover;
- background-position: center;
- height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
 .section2 {
   display: flex;
 }
 
-.first-image{
+.first-image {
   margin-top: 150px;
   height: 70vh;
   margin-left: 100px;
-  
 }
 
 .second-image {
@@ -80,7 +79,6 @@ body {
   padding-bottom: 50px;
   margin-top: 200px;
   margin-left: -67px;
-
 }
 
 .section2-text2 {
@@ -103,4 +101,144 @@ body {
   background-position: center;
   height: 80vh;
   margin-top: 50px;
+}
+
+.section4 {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: -webkit-center;
+}
+.section4 h3,
+.social h3 {
+  text-align: center !important;
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+.section4 h3::before,
+.section4 h3::after,
+.social h3::before,
+.social h3::after {
+  display: inline-block;
+  content: "";
+  border-top: 0.3rem solid black;
+  width: 4rem;
+  margin: 0 1rem;
+  transform: translateY(-1rem);
+}
+
+.section4-button {
+  width: 10%;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  color: black;
+}
+
+.section4-button:hover {
+  color: white;
+  background-color: black;
+}
+
+.social-icons {
+  text-align: center;
+  font-size: 35px;
+}
+.social-icons i {
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons i:hover {
+  color: gray;
+}
+
+.down-menu {
+  display: flex;
+  justify-content: space-around;
+}
+.down-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+.down-menu ul li {
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.list-group {
+  display: flex;
+  list-style-type: none;
+  width: 95%;
+  justify-content: space-between;
+}
+
+.category-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.product-images {
+  width: 400px;
+  height: 500px;
+  object-fit: contain;
+  
+}
+.addItem-wrapper {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.addItem-wrapper input {
+  width: 70%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.select {
+  padding: 5px;
+  border-radius: 4px;
+  background: black;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.card-button {
+  margin-bottom: 10px;
+  text-align: center !important;
+  padding: 5px;
+  border-radius: 4px;
+  background: white;
+  color: black;
+  width: 152px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+.card-button:hover {
+  background: black;
+  color: white;
 }

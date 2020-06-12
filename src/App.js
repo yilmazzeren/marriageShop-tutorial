@@ -5,10 +5,9 @@ import Layout from './components/Layout';
 import { Switch, Route } from 'react-router-dom';
 import Cart from './components/Cart';
 import Contact from './components/Contact';
-import Order from './components/Order';
 import AddItem from './components/AddItem';
-import SearchResults from './components/SearchResults';
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 class App extends Component {
 
@@ -19,12 +18,12 @@ class App extends Component {
       <Navbar/>
       <Switch>
         <Route path="/" exact component={Home}></Route>
-        <Route path="/urunler" component={SearchResults}></Route>
+        <Route path="/urunler" component={Layout}></Route>
         <Route path="/sepet" component={Cart}></Route>
-        <Route path="/siparislerim" component={Order}></Route>
         <Route path="/iletisim" component={Contact}></Route>
         <Route path="/urunEkleme" component={AddItem}></Route>
       </Switch>
+      <Footer/>
     </div>
   );
   }

@@ -35,17 +35,15 @@ class Navbar extends Component {
                       textDecoration: "none",
                       color: "black",
                       letterSpacing: "1px",
+                      fontWeight:"bold"
                     }}
                   >
-                    Wedding&Shop
+                    Wedding & Shop
                   </Link>
                 </div>
                 <ul className="navbar-items">
                   <Link to="/urunler">
                     <li>ÜRÜNLER</li>
-                  </Link>
-                  <Link to="/siparislerim">
-                    <li>SİPARİŞLERİM</li>
                   </Link>
                   <Link to="sepet">
                     <li>SEPET</li>

@@ -3,11 +3,13 @@ import * as inputActions from "../redux/actions/inputActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import Fade from "react-reveal/Fade";
+
+import Zoom from "react-reveal/Zoom";
 import image2 from "../image/image2.jpg";
 import image3 from "../image/image3.jpg";
-import image4 from "../image/image4.jpg";
 
-import Slide from 'react-reveal/Slide';
+import Slide from "react-reveal/Slide";
+
 class Home extends Component {
   render() {
     return (
@@ -39,7 +41,8 @@ class Home extends Component {
               <img className="second-image" src={image3} alt="" />
               <Fade top>
                 <div className="section2-text2">
-                  MEKANLAR<hr />
+                  MEKANLAR
+                  <hr />
                 </div>
               </Fade>
             </Fade>
@@ -47,35 +50,31 @@ class Home extends Component {
         </Fade>
         <Slide left>
           <div className="section3">
-          <h3
+            <h3
               style={{
                 textAlign: "left",
                 fontSize: "50px",
                 padding: "60px",
                 letterSpacing: "10px",
-                color:"white"
+                color: "white",
               }}
             >
               DIŞ ÇEKİM
             </h3>
           </div>
         </Slide>
-            <Slide left>
-          <div >
-          <h3
-              style={{
-                textAlign: "left",
-                fontSize: "50px",
-                padding: "60px",
-                letterSpacing: "10px",
-                color:"white"
-              }}
-            >
-              Hakkımızda
-            </h3>
+        <Zoom left>
+          <div className="section4">
+            <h3>HAKKIMIZDA</h3>
+            <p style={{ textAlign: "center", marginTop: "10px" }}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
+              asperiores tenetur earum, perspiciatis qui at.
+            </p>
+            <button className="section4-button">Devamı</button>
+            <br />
+            <br />
           </div>
-        </Slide>
-        
+        </Zoom>        
       </div>
     );
   }

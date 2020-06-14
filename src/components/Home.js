@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import * as inputActions from "../redux/actions/inputActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import Fade from "react-reveal/Fade";
+import {Link} from "react-router-dom"
 
+import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import image2 from "../image/image2.jpg";
 import image3 from "../image/image3.jpg";
@@ -70,7 +71,7 @@ class Home extends Component {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
               asperiores tenetur earum, perspiciatis qui at.
             </p>
-            <button className="section4-button">Devamı</button>
+            <Link className="section4-button" to ="iletisim">Devamı</Link> 
             <br />
             <br />
           </div>

@@ -1,11 +1,22 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
+import { bindActionCreators } from "redux";
+import * as categoryActions from "../redux/actions/categoryActions";
+import { connect } from "react-redux";
+
 class Footer extends Component {
+  componentDidMount() {
+    this.props.actions.getCategories();
+  }
+
+  changeCategory = (a) => {
+    console.log(a);
+  };
   render() {
     return (
       <div>
-          <hr/>
+        <hr />
         <footer>
           <div className="social">
             <h3>SOSYAL MEDYA</h3>
@@ -26,15 +37,15 @@ class Footer extends Component {
               <div>
                 <span>ÜRÜNLER</span>
                 <ul>
-                  <li>Gelinlik</li>
-                  <li>Davetiye</li>
-                  <li>Fotoğraf</li>
-                  <li>Nikah</li>
-                  <li>Mekanlar</li>
-                  <li>Gelin Çiçeği</li>
-                  <li>Gelin Aksesuarları</li>
-                  <li>Nikah Şekeri</li>
-                  <li>Ayakkabı</li>
+                  {this.props.categories.map((item, id) => (
+                    <li
+                      onClick={() => this.changeCategory(item.categoryName)}
+                      key={id}
+                      className="list-group-item"
+                    >
+                      {item.categoryName}
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div>
@@ -55,4 +66,21 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+function mapStateToProps(state) {
+  return {
+    categories: state.categoryListReducer,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {
+      getCategories: bindActionCreators(
+        categoryActions.getCategories,
+        dispatch
+      ),
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);

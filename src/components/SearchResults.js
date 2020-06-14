@@ -20,12 +20,12 @@ class SearchResults extends Component {
       e.target.previousElementSibling.previousElementSibling.innerHTML; // Ürün ,İsmi
 
     let array = [{ checkImage, checkPrice, checkProductName }];
-    return this.props.actions.cart(array).payload;
+    return this.props.actions.cart(array);
   };
 
   render() {
     return (
-      <div style={{ width: "100%" }} className="searchResult-wrapper">
+      <div style={{ width: "100%" ,margin:"50px" }} className="searchResult-wrapper">
         <h4 style={{ margin: "0" }}>
           Arama Sonuçları :
           <p
@@ -33,6 +33,7 @@ class SearchResults extends Component {
               color: "#858383",
               display: "inline-block",
               fontSize: "15px",
+              marginBottom:"60px"
             }}
           >
             {this.props.text}
@@ -40,9 +41,9 @@ class SearchResults extends Component {
         </h4>
 
         <div className="card-wrapper">
-          {this.props.products.map((product, id) => (
-            <Fade bottom>
-              <div key={id} className="card">                
+          {this.props.products.map((product) => (
+            <Fade key={product._id} bottom>
+              <div  className="card">                
                     <img
                       className="product-images"
                       src={product.imageUrl}

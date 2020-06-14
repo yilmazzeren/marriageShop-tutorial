@@ -9,7 +9,7 @@ export function getProductsSuccess(products) {
 
 export function getProducts() {
   return function (dispatch) {
-    let url = "http://localhost:3300";
+    let url = "http://localhost:3300/urunler";
     return fetch(url)
       .then((response) => response.json())
       .then((result) => dispatch(getProductsSuccess(result)));
